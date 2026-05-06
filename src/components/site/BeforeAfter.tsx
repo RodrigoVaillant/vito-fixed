@@ -1,5 +1,6 @@
 import beforeImg from "@/assets/before.jpg";
 import afterImg from "@/assets/after.jpg";
+import { Reveal } from "./Reveal";
 
 const benefits = [
   "Комфорт у спеку",
@@ -20,15 +21,17 @@ export function BeforeAfter() {
         </div>
 
         <div className="mt-16 grid gap-6 md:grid-cols-2">
-          <Card img={beforeImg} tag="ДО" title="Спека та дискомфорт" desc="Перегрів, втома, відчуття задухи — особливо в довгій дорозі." tone="warm" />
-          <Card img={afterImg} tag="ПІСЛЯ" title="Прохолода і спокій" desc="Стабільна температура, чисте повітря, повний контроль клімату." tone="cool" />
+          <Reveal><Card img={beforeImg} tag="ДО" title="Спека та дискомфорт" desc="Перегрів, втома, відчуття задухи — особливо в довгій дорозі." tone="warm" /></Reveal>
+          <Reveal delay={120}><Card img={afterImg} tag="ПІСЛЯ" title="Прохолода і спокій" desc="Стабільна температура, чисте повітря, повний контроль клімату." tone="cool" /></Reveal>
         </div>
 
         <div className="mt-12 grid grid-cols-2 gap-3 md:grid-cols-4">
-          {benefits.map((b) => (
-            <div key={b} className="rounded-2xl border border-border bg-card p-5 text-center">
-              <span className="text-sm font-medium">{b}</span>
-            </div>
+          {benefits.map((b, i) => (
+            <Reveal key={b} delay={i * 80}>
+              <div className="rounded-2xl border border-border bg-card p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-soft">
+                <span className="text-sm font-medium">{b}</span>
+              </div>
+            </Reveal>
           ))}
         </div>
       </div>
