@@ -1,0 +1,80 @@
+import { useState } from "react";
+import { Clock, Phone } from "lucide-react";
+
+export function ContactForm() {
+  const [sent, setSent] = useState(false);
+  return (
+    <section id="contact" className="relative overflow-hidden bg-ink py-24 text-primary-foreground md:py-32">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_color-mix(in_oklab,var(--primary-glow)_30%,transparent),_transparent_55%)]" />
+      <div className="relative mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2 lg:gap-20">
+        <div>
+          <p className="text-xs uppercase tracking-[0.25em] text-primary-glow">Розрахунок вартості</p>
+          <h2 className="mt-4 text-balance font-display text-4xl font-semibold tracking-tight md:text-5xl">
+            Дізнайтесь вартість встановлення для вашого Vito
+          </h2>
+          <p className="mt-5 max-w-md text-white/70">
+            Залиште заявку — підготуємо персональний розрахунок з урахуванням року, модифікації та комплектації вашого авто.
+          </p>
+          <div className="mt-8 flex items-center gap-3 text-sm text-white/80">
+            <Clock className="h-5 w-5 text-primary-glow" />
+            Відповімо протягом 15 хвилин
+          </div>
+        </div>
+
+        <form
+          onSubmit={(e) => { e.preventDefault(); setSent(true); }}
+          className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur md:p-10"
+        >
+          {sent ? (
+            <div className="grid place-items-center py-10 text-center">
+              <div className="grid h-14 w-14 place-items-center rounded-full bg-primary-glow/20 text-2xl">✓</div>
+              <h3 className="mt-5 text-2xl font-semibold">Заявку прийнято</h3>
+              <p className="mt-2 text-white/70">Ми зателефонуємо вам найближчим часом.</p>
+            </div>
+          ) : (
+            <div className="space-y-5">
+              <Field label="Ваше ім’я" name="name" placeholder="Андрій" />
+              <Field label="Телефон" name="phone" type="tel" placeholder="+380 ___ ___ ____" required />
+              <div className="grid grid-cols-2 gap-4">
+                <Field label="Рік авто" name="year" placeholder="2018" />
+                <div>
+                  <label className="text-xs uppercase tracking-[0.18em] text-white/60">Модель Vito</label>
+                  <select className="mt-2 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none transition-colors focus:border-primary-glow">
+                    <option className="bg-ink">Vito W639</option>
+                    <option className="bg-ink">Vito W447</option>
+                    <option className="bg-ink">V-Class</option>
+                  </select>
+                </div>
+              </div>
+              <button
+                type="submit"
+                className="group mt-2 inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-7 py-4 text-sm font-semibold text-ink transition-transform hover:scale-[1.02]"
+              >
+                Отримати розрахунок
+                <span className="transition-transform group-hover:translate-x-1">→</span>
+              </button>
+              <a href="tel:+380000000000" className="flex items-center justify-center gap-2 text-sm text-white/70 hover:text-white">
+                <Phone className="h-4 w-4" /> або зателефонуйте нам
+              </a>
+            </div>
+          )}
+        </form>
+      </div>
+    </section>
+  );
+}
+
+function Field({ label, name, type = "text", placeholder, required }: { label: string; name: string; type?: string; placeholder?: string; required?: boolean }) {
+  return (
+    <div>
+      <label className="text-xs uppercase tracking-[0.18em] text-white/60">{label}</label>
+      <input
+        name={name}
+        type={type}
+        placeholder={placeholder}
+        required={required}
+        className="mt-2 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/30 outline-none transition-colors focus:border-primary-glow"
+      />
+    </div>
+  );
+}
