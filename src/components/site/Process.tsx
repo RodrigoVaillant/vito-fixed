@@ -42,7 +42,7 @@ const groups = [
 ];
 
 export function Process() {
-  const [open, setOpen] = useState<number | null>(0);
+  const [open, setOpen] = useState<number | null>(null);
   return (
     <section id="process" className="bg-background py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
