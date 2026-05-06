@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronDown, Hammer, Cable, Settings, ClipboardCheck } from "lucide-react";
+import { Reveal } from "./Reveal";
 
 const groups = [
   {
