@@ -45,7 +45,7 @@ const groups = [
 export function Process() {
   const [open, setOpen] = useState<number | null>(null);
   return (
-    <section id="process" className="bg-background py-14 md:py-32">
+    <section id="process" className="bg-background py-14 md:pt-32 md:pb-20">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-xs uppercase tracking-[0.25em] text-primary">Процес встановлення</p>

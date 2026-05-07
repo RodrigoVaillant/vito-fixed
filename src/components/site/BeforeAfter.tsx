@@ -11,7 +11,7 @@ const benefits = [
 
 export function BeforeAfter() {
   return (
-    <section className="bg-gradient-soft py-14 md:py-32">
+    <section className="bg-gradient-soft py-14 md:pt-20 md:pb-32">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-xs uppercase tracking-[0.25em] text-primary">До і після</p>
