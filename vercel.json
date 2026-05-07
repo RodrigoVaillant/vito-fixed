@@ -1,12 +1,5 @@
 {
-  "buildCommand": "bun run build",
-  "outputDirectory": "dist/client",
-  "functions": {
-    "api/ssr.js": {
-      "memory": 1024
-    }
-  },
   "rewrites": [
-    { "source": "/(.*)", "destination": "/api/ssr" }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
