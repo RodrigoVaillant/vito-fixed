@@ -45,7 +45,7 @@ const groups = [
 export function Process() {
   const [open, setOpen] = useState<number | null>(null);
   return (
-    <section id="process" className="bg-background py-24 md:py-32">
+    <section id="process" className="bg-background py-14 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-xs uppercase tracking-[0.25em] text-primary">Процес встановлення</p>
@@ -54,7 +54,7 @@ export function Process() {
           </h2>
         </div>
 
-        <div className="mt-16 grid gap-4 lg:grid-cols-2 items-start">
+        <div className="mt-10 grid gap-4 md:mt-16 lg:grid-cols-2 items-start">
           {groups.map((g, i) => {
             const isOpen = open === i;
             return (

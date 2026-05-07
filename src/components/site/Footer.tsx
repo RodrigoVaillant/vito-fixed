@@ -2,7 +2,7 @@ import { Phone, Send, MapPin, Clock, Instagram, Facebook } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-background py-16">
+    <footer className="border-t border-border bg-background py-10 md:py-16">
       <div className="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-4">
         <div className="md:col-span-1">
           <div className="flex items-center gap-2">
@@ -33,7 +33,7 @@ export function Footer() {
         </FooterCol>
       </div>
 
-      <div className="mx-auto mt-12 max-w-7xl border-t border-border px-6 pt-6 text-xs text-muted-foreground">
+      <div className="mx-auto mt-8 max-w-7xl border-t border-border px-6 pt-6 text-xs text-muted-foreground md:mt-12">
         © {new Date().getFullYear()} VITOCENTER. Усі права захищено.
       </div>
     </footer>

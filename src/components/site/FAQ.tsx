@@ -12,7 +12,7 @@ const items = [
 export function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
   return (
-    <section id="faq" className="bg-gradient-soft py-24 md:py-32">
+    <section id="faq" className="bg-gradient-soft py-14 md:py-32">
       <div className="mx-auto max-w-3xl px-6">
         <div className="text-center">
           <p className="text-xs uppercase tracking-[0.25em] text-primary">Відповіді</p>
@@ -20,7 +20,7 @@ export function FAQ() {
             Часті запитання
           </h2>
         </div>
-        <div className="mt-14 space-y-3">
+        <div className="mt-8 space-y-3 md:mt-14">
           {items.map((it, i) => {
             const isOpen = open === i;
             return (

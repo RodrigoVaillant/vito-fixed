@@ -2,7 +2,7 @@ import { Phone } from "lucide-react";
 
 export function FinalCTA() {
   return (
-    <section className="bg-background py-24 md:py-32">
+    <section className="bg-background py-14 md:py-32">
       <div className="mx-auto max-w-6xl px-6">
         <div className="relative overflow-hidden rounded-[2.5rem] bg-gradient-hero p-12 text-primary-foreground md:p-20">
           <div className="absolute -right-20 -top-20 h-80 w-80 rounded-full bg-primary-glow/30 blur-3xl animate-float" />

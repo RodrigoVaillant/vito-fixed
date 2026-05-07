@@ -4,7 +4,7 @@ import { Clock, Phone } from "lucide-react";
 export function ContactForm() {
   const [sent, setSent] = useState(false);
   return (
-    <section id="contact" className="relative overflow-hidden bg-ink py-24 text-primary-foreground md:py-32">
+    <section id="contact" className="relative overflow-hidden bg-ink py-14 text-primary-foreground md:py-32">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_color-mix(in_oklab,var(--primary-glow)_30%,transparent),_transparent_55%)]" />
       <div className="relative mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2 lg:gap-20">
         <div>

@@ -11,7 +11,7 @@ const benefits = [
 
 export function BeforeAfter() {
   return (
-    <section className="bg-gradient-soft py-24 md:py-32">
+    <section className="bg-gradient-soft py-14 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-xs uppercase tracking-[0.25em] text-primary">До і після</p>
@@ -20,12 +20,12 @@ export function BeforeAfter() {
           </h2>
         </div>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-2">
+        <div className="mt-10 grid gap-6 md:mt-16 md:grid-cols-2">
           <Reveal><Card img={beforeImg} tag="ДО" title="Спека та дискомфорт" desc="Перегрів, втома, відчуття задухи — особливо в довгій дорозі." tone="warm" /></Reveal>
           <Reveal delay={120}><Card img={afterImg} tag="ПІСЛЯ" title="Прохолода і спокій" desc="Стабільна температура, чисте повітря, повний контроль клімату." tone="cool" /></Reveal>
         </div>
 
-        <div className="mt-12 grid grid-cols-2 gap-3 md:grid-cols-4">
+        <div className="mt-8 grid grid-cols-2 gap-3 md:mt-12 md:grid-cols-4">
           {benefits.map((b, i) => (
             <Reveal key={b} delay={i * 80}>
               <div className="rounded-2xl border border-border bg-card p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-soft">

@@ -13,7 +13,7 @@ const items = [
 
 export function Gallery() {
   return (
-    <section id="gallery" className="bg-background py-24 md:py-32">
+    <section id="gallery" className="bg-background py-14 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
@@ -27,7 +27,7 @@ export function Gallery() {
           </p>
         </div>
 
-        <div className="mt-12 grid auto-rows-[220px] grid-cols-1 gap-4 md:grid-cols-4 md:auto-rows-[260px]">
+        <div className="mt-8 grid auto-rows-[220px] grid-cols-1 gap-4 md:mt-12 md:grid-cols-4 md:auto-rows-[260px]">
           {items.map((it, i) => (
             <Reveal key={i} delay={i * 100} className={it.span}>
               <div className="group relative h-full w-full overflow-hidden rounded-3xl">

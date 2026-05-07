@@ -12,7 +12,7 @@ const items = [
 
 export function Advantages() {
   return (
-    <section id="advantages" className="bg-gradient-soft py-24 md:py-32">
+    <section id="advantages" className="bg-gradient-soft py-14 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-xs uppercase tracking-[0.25em] text-primary">Чому VITOCENTER</p>
@@ -24,7 +24,7 @@ export function Advantages() {
           </p>
         </div>
 
-        <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-5 md:mt-16 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((it, i) => (
             <Reveal key={it.title} delay={i * 80}>
               <div

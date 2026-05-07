@@ -50,7 +50,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="animate-fade-up delay-400 mt-20 grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-6">
+        <div className="animate-fade-up delay-400 mt-12 grid grid-cols-2 gap-3 md:mt-20 md:grid-cols-4 md:gap-6">
           {trust.map((t) => (
             <div
               key={t.label}
