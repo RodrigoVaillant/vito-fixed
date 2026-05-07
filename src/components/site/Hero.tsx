@@ -1,5 +1,5 @@
 import heroImg from "@/assets/hero-vito.jpg";
-import { ShieldCheck, Wrench, Award, Snowflake } from "lucide-react";
+import { Award, ShieldCheck, Snowflake, Wrench } from "lucide-react";
 
 const trust = [
   { icon: Award, label: "Досвід роботи" },
@@ -25,27 +25,31 @@ export function Hero() {
         <div className="max-w-3xl">
           <div className="animate-fade-up inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-white/80 backdrop-blur">
             <span className="h-1.5 w-1.5 rounded-full bg-primary-glow" />
-            Спеціалізація — Mercedes Vito
+            Спеціалізація - Mercedes Vito
           </div>
           <h1 className="animate-fade-up delay-100 mt-6 text-balance font-display text-5xl font-semibold leading-[1.05] tracking-tight md:text-7xl">
-            Встановлення кондиціонера на <span className="bg-gradient-to-r from-white to-primary-glow bg-clip-text text-transparent">Mercedes Vito</span>
+            Встановлення кондиціонера на{" "}
+            <span className="bg-gradient-to-r from-white to-primary-glow bg-clip-text text-transparent">
+              Mercedes Vito
+            </span>
           </h1>
           <p className="animate-fade-up delay-200 mt-6 max-w-2xl text-lg text-white/70 md:text-xl">
-            Професійне встановлення кондиціонерів під ключ з гарантією та заводським підходом.
+            Кондиціонер під ключ за 900 € з гарантією, професійним монтажем і
+            перевіркою системи перед видачею авто.
           </p>
           <div className="animate-fade-up delay-300 mt-10 flex flex-wrap gap-4">
             <a
               href="#contact"
               className="group inline-flex items-center gap-2 rounded-full bg-white px-7 py-4 text-sm font-semibold text-ink transition-transform hover:scale-[1.03]"
             >
-              Розрахувати вартість
+              Забронювати за 900 €
               <span className="transition-transform group-hover:translate-x-1">→</span>
             </a>
             <a
-              href="#contact"
+              href="#price"
               className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-7 py-4 text-sm font-semibold text-white backdrop-blur transition-colors hover:bg-white/10"
             >
-              Отримати консультацію
+              Що входить у ціну
             </a>
           </div>
         </div>

@@ -1,20 +1,31 @@
 import { useState } from "react";
-import { Clock, Phone } from "lucide-react";
+import { BadgeEuro, Clock, Phone } from "lucide-react";
 
 export function ContactForm() {
   const [sent, setSent] = useState(false);
+
   return (
     <section id="contact" className="relative overflow-hidden bg-ink py-14 text-primary-foreground md:py-32">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_color-mix(in_oklab,var(--primary-glow)_30%,transparent),_transparent_55%)]" />
       <div className="relative mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2 lg:gap-20">
         <div>
-          <p className="text-xs uppercase tracking-[0.25em] text-primary-glow">Розрахунок вартості</p>
+          <p className="text-xs uppercase tracking-[0.25em] text-primary-glow">Заявка на встановлення</p>
           <h2 className="mt-4 text-balance font-display text-4xl font-semibold tracking-tight md:text-5xl">
-            Дізнайтесь вартість встановлення для вашого Vito
+            Встановлення кондиціонера на Vito за 900 € під ключ
           </h2>
           <p className="mt-5 max-w-md text-white/70">
-            Залиште заявку — підготуємо персональний розрахунок з урахуванням року, модифікації та комплектації вашого авто.
+            Залиште номер, щоб підтвердити сумісність з вашим авто та забронювати
+            найближчу вільну дату встановлення.
           </p>
+
+          <div className="mt-6 inline-flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-5 py-4 backdrop-blur">
+            <BadgeEuro className="h-6 w-6 text-primary-glow" />
+            <div>
+              <div className="text-2xl font-semibold">900 €</div>
+              <div className="text-xs uppercase tracking-[0.18em] text-white/55">ціна під ключ</div>
+            </div>
+          </div>
+
           <div className="mt-8 flex items-center gap-3 text-sm text-white/80">
             <Clock className="h-5 w-5 text-primary-glow" />
             Відповімо протягом 15 хвилин
@@ -22,7 +33,10 @@ export function ContactForm() {
         </div>
 
         <form
-          onSubmit={(e) => { e.preventDefault(); setSent(true); }}
+          onSubmit={(e) => {
+            e.preventDefault();
+            setSent(true);
+          }}
           className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur md:p-10"
         >
           {sent ? (
@@ -33,7 +47,7 @@ export function ContactForm() {
             </div>
           ) : (
             <div className="space-y-5">
-              <Field label="Ваше ім’я" name="name" placeholder="Андрій" />
+              <Field label="Ваше ім'я" name="name" placeholder="Андрій" />
               <Field label="Телефон" name="phone" type="tel" placeholder="+380 ___ ___ ____" required />
               <div className="grid grid-cols-2 gap-4">
                 <Field label="Рік авто" name="year" placeholder="2018" />
@@ -50,7 +64,7 @@ export function ContactForm() {
                 type="submit"
                 className="group mt-2 inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-7 py-4 text-sm font-semibold text-ink transition-transform hover:scale-[1.02]"
               >
-                Отримати розрахунок
+                Забронювати встановлення за 900 €
                 <span className="transition-transform group-hover:translate-x-1">→</span>
               </button>
               <a href="tel:+380000000000" className="flex items-center justify-center gap-2 text-sm text-white/70 hover:text-white">
@@ -64,7 +78,19 @@ export function ContactForm() {
   );
 }
 
-function Field({ label, name, type = "text", placeholder, required }: { label: string; name: string; type?: string; placeholder?: string; required?: boolean }) {
+function Field({
+  label,
+  name,
+  type = "text",
+  placeholder,
+  required,
+}: {
+  label: string;
+  name: string;
+  type?: string;
+  placeholder?: string;
+  required?: boolean;
+}) {
   return (
     <div>
       <label className="text-xs uppercase tracking-[0.18em] text-white/60">{label}</label>
