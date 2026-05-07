@@ -1,5 +1,5 @@
-import beforeImg from "@/assets/before.jpg";
-import afterImg from "@/assets/after.jpg";
+import beforeImg from "../../../images/img_before.jpg";
+import afterImg from "../../../images/img_to.jpg";
 import { Reveal } from "./Reveal";
 
 const benefits = [
