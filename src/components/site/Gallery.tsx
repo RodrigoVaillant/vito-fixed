@@ -1,14 +1,24 @@
-import g1 from "@/assets/gallery-1.jpg";
-import g2 from "@/assets/gallery-2.jpg";
-import g3 from "@/assets/gallery-3.jpg";
-import g4 from "@/assets/gallery-4.jpg";
+import station1 from "../../../images/servicestation/photo_2026-05-07_14-57-28.jpg";
+import station2 from "../../../images/servicestation/photo_2026-05-07_14-57-31.jpg";
+import station3 from "../../../images/servicestation/photo_2026-05-07_14-57-34.jpg";
 import { Reveal } from "./Reveal";
 
 const items = [
-  { src: g3, label: "Сервісний цех", span: "md:col-span-2 md:row-span-2" },
-  { src: g1, label: "Робоча зона майстрів", span: "" },
-  { src: g2, label: "Монтажне місце", span: "" },
-  { src: g4, label: "Mercedes Vito у роботі", span: "md:col-span-2" },
+  {
+    src: station2,
+    label: "Сервісний цех VITOCENTER",
+    span: "md:col-span-2 md:row-span-2",
+  },
+  {
+    src: station1,
+    label: "Робочі місця для Vito",
+    span: "",
+  },
+  {
+    src: station3,
+    label: "Авто в зоні обслуговування",
+    span: "",
+  },
 ];
 
 export function Gallery() {
@@ -23,12 +33,12 @@ export function Gallery() {
             </h2>
           </div>
           <p className="max-w-md text-muted-foreground">
-            Показуємо сервісний простір, робочі зони та авто в процесі встановлення,
-            щоб ви бачили, де саме виконуються роботи.
+            Роботи виконуємо у власному сервісному просторі з підйомниками, робочими
+            зонами та досвідом обслуговування Mercedes Vito.
           </p>
         </div>
 
-        <div className="mt-8 grid auto-rows-[220px] grid-cols-1 gap-4 md:mt-12 md:grid-cols-4 md:auto-rows-[260px]">
+        <div className="mt-8 grid auto-rows-[240px] grid-cols-1 gap-4 md:mt-12 md:grid-cols-3 md:auto-rows-[260px]">
           {items.map((it, i) => (
             <Reveal key={it.label} delay={i * 100} className={it.span}>
               <div className="group relative h-full w-full overflow-hidden rounded-3xl">
@@ -36,8 +46,8 @@ export function Gallery() {
                   src={it.src}
                   alt={it.label}
                   loading="lazy"
-                  width={1024}
-                  height={1024}
+                  width={1280}
+                  height={960}
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
