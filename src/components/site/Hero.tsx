@@ -34,7 +34,8 @@ export function Hero() {
             </span>
           </h1>
           <p className="animate-fade-up delay-200 mt-6 max-w-2xl text-lg text-white/70 md:text-xl">
-            Повний комплект кондиціонування для Mercedes Vito від 900€.. професійний
+            Повний комплект кондиціонування для Mercedes Vito від{" "}
+            <span className="font-semibold text-white">900€</span>.. професійний
             монтаж, перевірка системи та гарантія на виконані роботи.
           </p>
           <div className="animate-fade-up delay-300 mt-10 flex flex-wrap gap-4">
