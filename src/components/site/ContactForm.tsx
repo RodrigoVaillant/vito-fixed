@@ -1,8 +1,25 @@
 import { useState } from "react";
 import { BadgeEuro, Clock, Phone } from "lucide-react";
 
+function formatPhone(raw: string): string {
+  const digits = raw.replace(/\D/g, "").slice(0, 12);
+  if (digits.length === 0) return "";
+  let result = "+";
+  if (digits.length <= 3) return result + digits;
+  result += digits.slice(0, 3) + " (";
+  if (digits.length <= 5) return result + digits.slice(3);
+  result += digits.slice(3, 5) + ") ";
+  if (digits.length <= 8) return result + digits.slice(5);
+  result += digits.slice(5, 8) + " ";
+  if (digits.length <= 10) return result + digits.slice(8);
+  result += digits.slice(8, 10) + " ";
+  result += digits.slice(10, 12);
+  return result;
+}
+
 export function ContactForm() {
   const [sent, setSent] = useState(false);
+  const [phone, setPhone] = useState("");
 
   return (
     <section id="contact" className="relative overflow-hidden bg-ink py-14 text-primary-foreground md:py-32">
@@ -51,7 +68,19 @@ export function ContactForm() {
           ) : (
             <div className="space-y-5">
               <Field label="Ваше ім'я" name="name" placeholder="Андрій" />
-              <Field label="Телефон" name="phone" type="tel" placeholder="+380 ___ ___ ____" required />
+              <div>
+                <label className="text-xs uppercase tracking-[0.18em] text-white/60">Телефон</label>
+                <input
+                  name="phone"
+                  type="tel"
+                  inputMode="numeric"
+                  placeholder="+380 (XX) XXX XX XX"
+                  required
+                  value={phone}
+                  onChange={(e) => setPhone(formatPhone(e.target.value))}
+                  className="mt-2 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-white/30 outline-none transition-colors focus:border-primary-glow"
+                />
+              </div>
               <div className="grid grid-cols-2 gap-4">
                 <Field label="Рік авто" name="year" placeholder="2018" />
                 <div>
