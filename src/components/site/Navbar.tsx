@@ -32,11 +32,7 @@ export function Navbar() {
             <a
               key={l.href}
               href={l.href}
-              className={`text-sm font-medium transition-colors ${
-                scrolled
-                  ? "text-muted-foreground hover:text-foreground"
-                  : "text-white/85 hover:text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)]"
-              }`}
+              className="text-sm font-medium text-white/85 drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)] transition-colors hover:text-white"
             >
               {l.label}
             </a>
@@ -44,11 +40,7 @@ export function Navbar() {
         </nav>
         <a
           href="#contact"
-          className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all hover:scale-105 ${
-            scrolled
-              ? "bg-foreground text-background"
-              : "bg-white text-ink shadow-md"
-          }`}
+          className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-medium text-ink shadow-md transition-all hover:scale-105"
         >
           <Phone className="h-4 w-4" />
           <span className="hidden sm:inline">Зв’язатись</span>
