@@ -34,22 +34,22 @@ export function Hero() {
             </span>
           </h1>
           <p className="animate-fade-up delay-200 mt-6 max-w-2xl text-lg text-white/70 md:text-xl">
-            Кондиціонер під ключ за 900 € з гарантією, професійним монтажем і
-            перевіркою системи перед видачею авто.
+            Повний комплект кондиціонування для Mercedes Vito: професійний монтаж,
+            перевірка системи та гарантія на виконані роботи.
           </p>
           <div className="animate-fade-up delay-300 mt-10 flex flex-wrap gap-4">
             <a
               href="#contact"
               className="group inline-flex items-center gap-2 rounded-full bg-white px-7 py-4 text-sm font-semibold text-ink transition-transform hover:scale-[1.03]"
             >
-              Забронювати за 900 €
+              Забронювати встановлення
               <span className="transition-transform group-hover:translate-x-1">→</span>
             </a>
             <a
-              href="#price"
+              href="#contact"
               className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-7 py-4 text-sm font-semibold text-white backdrop-blur transition-colors hover:bg-white/10"
             >
-              Що входить у ціну
+              Отримати консультацію
             </a>
           </div>
         </div>

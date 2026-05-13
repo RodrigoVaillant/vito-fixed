@@ -11,20 +11,23 @@ export function ContactForm() {
         <div>
           <p className="text-xs uppercase tracking-[0.25em] text-primary-glow">Заявка на встановлення</p>
           <h2 className="mt-4 text-balance font-display text-4xl font-semibold tracking-tight md:text-5xl">
-            Встановлення кондиціонера на Vito за 900 € під ключ
+            Кондиціонер для Mercedes Vito — встановлення під ключ від 900 €
           </h2>
           <p className="mt-5 max-w-md text-white/70">
-            Залиште номер, щоб підтвердити сумісність з вашим авто та забронювати
-            найближчу вільну дату встановлення.
+            Перевіримо сумісність саме з вашим Vito, узгодимо комплектацію та
+            забронюємо найближчу дату встановлення.
           </p>
 
           <div className="mt-6 inline-flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-5 py-4 backdrop-blur">
             <BadgeEuro className="h-6 w-6 text-primary-glow" />
             <div>
               <div className="text-2xl font-semibold">900 €</div>
-              <div className="text-xs uppercase tracking-[0.18em] text-white/55">ціна під ключ</div>
+              <div className="text-xs uppercase tracking-[0.18em] text-white/55">Монтаж + комплектуючі + заправка</div>
             </div>
           </div>
+          <p className="mt-3 text-xs text-white/45">
+            Фінальна вартість залежить від комплектації авто та обраної системи.
+          </p>
 
           <div className="mt-8 flex items-center gap-3 text-sm text-white/80">
             <Clock className="h-5 w-5 text-primary-glow" />

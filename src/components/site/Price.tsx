@@ -16,7 +16,7 @@ export function Price() {
           <div className="max-w-2xl">
             <p className="text-xs uppercase tracking-[0.25em] text-primary">Вартість</p>
             <h2 className="mt-4 text-balance text-4xl font-semibold tracking-tight md:text-5xl">
-              Прозора ціна без прихованих доплат
+              Прозора вартість без прихованих платежів
             </h2>
             <p className="mt-5 text-lg text-muted-foreground">
               Базова вартість встановлення кондиціонера на Mercedes Vito вказана одразу,
@@ -46,8 +46,11 @@ export function Price() {
                   <span className="pb-2 text-2xl font-semibold text-muted-foreground">€</span>
                 </div>
                 <p className="mt-3 text-sm text-muted-foreground">
-                  Фінальна ціна для стандартного встановлення. Сумісність підтвердимо
-                  після заявки.
+                  У вартість входить комплект кондиціонування, монтаж, підключення,
+                  налаштування та перевірка роботи системи.
+                </p>
+                <p className="mt-2 text-xs text-muted-foreground/70">
+                  Додаткові роботи погоджуються до початку монтажу.
                 </p>
               </div>
 
