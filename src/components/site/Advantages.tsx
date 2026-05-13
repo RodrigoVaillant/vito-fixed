@@ -1,13 +1,13 @@
-import { Target, Clock, ShieldCheck, Package, Settings2, Activity } from "lucide-react";
+import { Target, Wrench, Package, Settings2, ShieldCheck, Activity } from "lucide-react";
 import { Reveal } from "./Reveal";
 
 const items = [
-  { icon: Target, title: "Вузька спеціалізація", text: "Працюємо виключно з Mercedes Vito — знаємо кожну деталь авто." },
-  { icon: Clock, title: "Великий досвід", text: "Сотні встановлених систем кондиціонування під ключ." },
-  { icon: ShieldCheck, title: "Гарантія на роботи", text: "Офіційна гарантія на монтаж і всі виконані роботи." },
-  { icon: Package, title: "Перевірені комплектуючі", text: "Оригінальні та сертифіковані компоненти від надійних брендів." },
-  { icon: Settings2, title: "Повний цикл", text: "Від демонтажу до пусконалагоджувальних робіт — все в одному місці." },
-  { icon: Activity, title: "Діагностика та налаштування", text: "Точна перевірка і калібрування системи після монтажу." },
+  { icon: Target, title: "Вузька спеціалізація на Mercedes Vito", text: "Працюємо саме з Mercedes Vito та знаємо особливості цієї моделі до деталей." },
+  { icon: Wrench, title: "Акуратний монтаж салону", text: "Розбираємо та збираємо елементи салону без пошкоджень і кустарних рішень." },
+  { icon: Package, title: "Перевірені комплектуючі", text: "Використовуємо сумісні компоненти, які коректно працюють із системою Vito." },
+  { icon: Settings2, title: "Монтаж під ключ", text: "Повний цикл робіт: від підготовки та встановлення до перевірки системи." },
+  { icon: ShieldCheck, title: "Гарантія на роботи", text: "Після встановлення перевіряємо систему та надаємо гарантію на виконані роботи." },
+  { icon: Activity, title: "Перевірка системи після встановлення", text: "Тестуємо охолодження, підключення та стабільність роботи кондиціонера." },
 ];
 
 export function Advantages() {
@@ -17,7 +17,7 @@ export function Advantages() {
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-xs uppercase tracking-[0.25em] text-primary">Чому VITOCENTER</p>
           <h2 className="mt-4 text-balance text-4xl font-semibold tracking-tight md:text-5xl">
-            Заводський підхід до кожного встановлення
+            Професійний монтаж із заводським підходом
           </h2>
           <p className="mt-4 text-muted-foreground">
             Ми зосереджені на одній моделі — і робимо це краще за інших.
