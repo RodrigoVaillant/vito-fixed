@@ -1,4 +1,4 @@
-import { Phone, MapPin, Clock, Instagram, Facebook } from "lucide-react";
+import { Phone, MapPin, Clock, Instagram, Facebook, Mail } from "lucide-react";
 
 export function Footer() {
   return (
@@ -18,10 +18,11 @@ export function Footer() {
           <a href="tel:+380661907070" className="flex items-center gap-2 hover:text-foreground"><Phone className="h-4 w-4" /> (066) 190-70-70</a>
           <a href="tel:+380961907070" className="flex items-center gap-2 hover:text-foreground"><Phone className="h-4 w-4" /> (096) 190-70-70</a>
           <a href="tel:+380731907070" className="flex items-center gap-2 hover:text-foreground"><Phone className="h-4 w-4" /> (073) 190-70-70</a>
+          <a href="mailto:mail@vitocenter.com.ua" className="flex items-center gap-2 hover:text-foreground"><Mail className="h-4 w-4" /> mail@vitocenter.com.ua</a>
         </FooterCol>
 
         <FooterCol title="Адреса">
-          <span className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4" /> м. Дніпро</span>
+          <span className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4" /> м. Дніпро, вул. Залізної Дивізії, 27</span>
           <span className="flex items-start gap-2"><Clock className="mt-0.5 h-4 w-4" /> Пн–Сб, 9:00 – 19:00</span>
         </FooterCol>
 
