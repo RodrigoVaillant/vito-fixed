@@ -1,4 +1,4 @@
-import { Phone, Send, MapPin, Clock, Instagram, Facebook } from "lucide-react";
+import { Phone, MapPin, Clock, Instagram, Facebook } from "lucide-react";
 
 export function Footer() {
   return (
@@ -15,20 +15,20 @@ export function Footer() {
         </div>
 
         <FooterCol title="Контакти">
-          <a href="tel:+380000000000" className="flex items-center gap-2 hover:text-foreground"><Phone className="h-4 w-4" /> +380 (00) 000 00 00</a>
-          <a href="https://t.me/vitocenter" className="flex items-center gap-2 hover:text-foreground"><Send className="h-4 w-4" /> @vitocenter</a>
+          <a href="tel:+380661907070" className="flex items-center gap-2 hover:text-foreground"><Phone className="h-4 w-4" /> (066) 190-70-70</a>
+          <a href="tel:+380961907070" className="flex items-center gap-2 hover:text-foreground"><Phone className="h-4 w-4" /> (096) 190-70-70</a>
+          <a href="tel:+380731907070" className="flex items-center gap-2 hover:text-foreground"><Phone className="h-4 w-4" /> (073) 190-70-70</a>
         </FooterCol>
 
         <FooterCol title="Адреса">
-          <span className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4" /> м. Київ, вул. Сервісна, 1</span>
+          <span className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4" /> м. Дніпро</span>
           <span className="flex items-start gap-2"><Clock className="mt-0.5 h-4 w-4" /> Пн–Сб, 9:00 – 19:00</span>
         </FooterCol>
 
         <FooterCol title="Соцмережі">
           <div className="flex gap-3">
-            <a href="#" aria-label="Instagram" className="grid h-10 w-10 place-items-center rounded-xl border border-border transition-colors hover:bg-muted"><Instagram className="h-4 w-4" /></a>
-            <a href="#" aria-label="Facebook" className="grid h-10 w-10 place-items-center rounded-xl border border-border transition-colors hover:bg-muted"><Facebook className="h-4 w-4" /></a>
-            <a href="#" aria-label="Telegram" className="grid h-10 w-10 place-items-center rounded-xl border border-border transition-colors hover:bg-muted"><Send className="h-4 w-4" /></a>
+            <a href="https://www.instagram.com/vitocenterdnipro/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="grid h-10 w-10 place-items-center rounded-xl border border-border transition-colors hover:bg-muted"><Instagram className="h-4 w-4" /></a>
+            <a href="https://www.facebook.com/dnipro.vito.center.ruslan.odanets/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="grid h-10 w-10 place-items-center rounded-xl border border-border transition-colors hover:bg-muted"><Facebook className="h-4 w-4" /></a>
           </div>
         </FooterCol>
       </div>

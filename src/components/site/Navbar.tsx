@@ -35,11 +35,11 @@ export function Navbar() {
           ))}
         </nav>
         <a
-          href="#contact"
+          href="tel:+380661907070"
           className="inline-flex items-center gap-2 rounded-full bg-foreground px-4 py-2 text-sm font-medium text-background transition-all hover:scale-105"
         >
           <Phone className="h-4 w-4" />
-          <span className="hidden sm:inline">Зв’язатись</span>
+          <span className="hidden sm:inline">(066) 190-70-70</span>
         </a>
       </div>
     </header>
