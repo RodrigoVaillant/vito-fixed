@@ -48,7 +48,7 @@ export function Process() {
     <section id="process" className="bg-background py-14 md:pt-32 md:pb-20">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm uppercase tracking-[0.25em] text-primary">Процес встановлення</p>
+          <p className="text-base uppercase tracking-[0.25em] text-primary">Процес встановлення</p>
           <h2 className="mt-4 text-balance text-4xl font-semibold tracking-tight md:text-5xl">
             Чотири етапи. Кожна деталь під контролем.
           </h2>

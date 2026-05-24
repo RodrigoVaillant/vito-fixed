@@ -14,7 +14,7 @@ export function BeforeAfter() {
     <section className="bg-gradient-soft py-14 md:pt-20 md:pb-32">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm uppercase tracking-[0.25em] text-primary">До і після</p>
+          <p className="text-base uppercase tracking-[0.25em] text-primary">До і після</p>
           <h2 className="mt-4 text-balance text-4xl font-semibold tracking-tight md:text-5xl">
             Як виглядає встановлення кондиціонера в салоні
           </h2>

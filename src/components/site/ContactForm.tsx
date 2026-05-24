@@ -28,7 +28,7 @@ export function ContactForm() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_color-mix(in_oklab,var(--primary-glow)_30%,transparent),_transparent_55%)]" />
       <div className="relative mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2 lg:gap-20">
         <div>
-          <p className="text-sm uppercase tracking-[0.25em] text-primary-glow">Заявка на встановлення</p>
+          <p className="text-base uppercase tracking-[0.25em] text-primary-glow">Заявка на встановлення</p>
           <h2 className="mt-4 text-balance font-display text-4xl font-semibold tracking-tight md:text-5xl">
             Кондиціонер для Mercedes Vito — встановлення під ключ від 900 €
           </h2>

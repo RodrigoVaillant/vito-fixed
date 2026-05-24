@@ -27,7 +27,7 @@ export function Gallery() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
-            <p className="text-sm uppercase tracking-[0.25em] text-primary">СТО</p>
+            <p className="text-base uppercase tracking-[0.25em] text-primary">СТО</p>
             <h2 className="mt-3 text-balance text-4xl font-semibold tracking-tight md:text-5xl">
               Наше СТО
             </h2>

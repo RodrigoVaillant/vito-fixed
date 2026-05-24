@@ -14,7 +14,7 @@ export function Price() {
       <div className="mx-auto grid max-w-7xl items-center gap-8 px-6 lg:grid-cols-[1fr_0.9fr] lg:gap-16">
         <Reveal>
           <div className="max-w-2xl">
-            <p className="text-sm uppercase tracking-[0.25em] text-primary">Вартість</p>
+            <p className="text-base uppercase tracking-[0.25em] text-primary">Вартість</p>
             <h2 className="mt-4 text-balance text-4xl font-semibold tracking-tight md:text-5xl">
               Прозора вартість без прихованих платежів
             </h2>
