@@ -15,7 +15,7 @@ export function FAQ() {
     <section id="faq" className="bg-gradient-soft py-14 md:py-32">
       <div className="mx-auto max-w-3xl px-6">
         <div className="text-center">
-          <p className="text-xs uppercase tracking-[0.25em] text-primary">Відповіді</p>
+          <p className="text-sm uppercase tracking-[0.25em] text-primary">Відповіді</p>
           <h2 className="mt-4 text-balance text-4xl font-semibold tracking-tight md:text-5xl">
             Часті запитання
           </h2>
