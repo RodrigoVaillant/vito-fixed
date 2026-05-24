@@ -19,6 +19,8 @@ function formatPhone(raw: string): string {
 
 export function ContactForm() {
   const [sent, setSent] = useState(false);
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [phone, setPhone] = useState("");
 
   return (
@@ -53,9 +55,33 @@ export function ContactForm() {
         </div>
 
         <form
-          onSubmit={(e) => {
+          onSubmit={async (e) => {
             e.preventDefault();
-            setSent(true);
+            setLoading(true);
+            setError(false);
+            const form = e.currentTarget;
+            const data = {
+              name: (form.elements.namedItem("name") as HTMLInputElement).value,
+              phone,
+              year: (form.elements.namedItem("year") as HTMLInputElement).value,
+              model: (form.elements.namedItem("model") as HTMLSelectElement).value,
+            };
+            try {
+              const res = await fetch("/api/submit", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data),
+              });
+              if (res.ok) {
+                setSent(true);
+              } else {
+                setError(true);
+              }
+            } catch {
+              setError(true);
+            } finally {
+              setLoading(false);
+            }
           }}
           className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur md:p-10"
         >
@@ -85,19 +111,23 @@ export function ContactForm() {
                 <Field label="Рік авто" name="year" placeholder="2018" />
                 <div>
                   <label className="text-xs uppercase tracking-[0.18em] text-white/60">Модель Vito</label>
-                  <select className="mt-2 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none transition-colors focus:border-primary-glow">
+                  <select name="model" className="mt-2 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none transition-colors focus:border-primary-glow">
                     <option className="bg-ink">Vito W639</option>
                     <option className="bg-ink">Vito W447</option>
                     <option className="bg-ink">V-Class</option>
                   </select>
                 </div>
               </div>
+              {error && (
+                <p className="text-center text-sm text-red-400">Помилка відправки. Зателефонуйте нам.</p>
+              )}
               <button
                 type="submit"
-                className="group mt-2 inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-7 py-4 text-sm font-semibold text-ink transition-transform hover:scale-[1.02]"
+                disabled={loading}
+                className="group mt-2 inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-7 py-4 text-sm font-semibold text-ink transition-transform hover:scale-[1.02] disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                Забронювати встановлення за 900 €
-                <span className="transition-transform group-hover:translate-x-1">→</span>
+                {loading ? "Відправляємо..." : "Забронювати встановлення за 900 €"}
+                {!loading && <span className="transition-transform group-hover:translate-x-1">→</span>}
               </button>
               <a href="tel:+380000000000" className="flex items-center justify-center gap-2 text-sm text-white/70 hover:text-white">
                 <Phone className="h-4 w-4" /> або зателефонуйте нам

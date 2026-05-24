@@ -1,14 +1,14 @@
 import { Phone, MapPin, Clock, Instagram, Facebook, Mail } from "lucide-react";
+import logoSvg from "@/assets/logo.svg";
 
 export function Footer() {
   return (
     <footer className="border-t border-border bg-background py-10 md:py-16">
       <div className="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-4">
         <div className="md:col-span-1">
-          <div className="flex items-center gap-2">
-            <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-primary text-primary-foreground font-bold">V</span>
-            <span className="font-display text-lg font-semibold tracking-tight">VITOCENTER</span>
-          </div>
+          <a href="#top" className="flex items-center">
+            <img src={logoSvg} alt="VITOCENTER" className="h-9 w-auto" />
+          </a>
           <p className="mt-4 text-sm text-muted-foreground">
             Спеціалізований сервіс встановлення кондиціонерів на Mercedes Vito.
           </p>
