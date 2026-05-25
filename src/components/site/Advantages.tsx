@@ -1,13 +1,11 @@
-import { Target, Wrench, Package, Settings2, ShieldCheck, Activity } from "lucide-react";
+import { Target, Package, Settings2, ShieldCheck } from "lucide-react";
 import { Reveal } from "./Reveal";
 
 const items = [
-  { icon: Target, title: "Вузька спеціалізація на Mercedes Vito", text: "Працюємо саме з Mercedes Vito та знаємо особливості цієї моделі до деталей." },
-  { icon: Wrench, title: "Акуратний монтаж салону", text: "Розбираємо та збираємо елементи салону без пошкоджень і кустарних рішень." },
-  { icon: Package, title: "Перевірені комплектуючі", text: "Використовуємо сумісні компоненти, які коректно працюють із системою Vito." },
-  { icon: Settings2, title: "Монтаж під ключ", text: "Повний цикл робіт: від підготовки та встановлення до перевірки системи." },
-  { icon: ShieldCheck, title: "Гарантія на роботи", text: "Після встановлення перевіряємо систему та надаємо гарантію на виконані роботи." },
-  { icon: Activity, title: "Перевірка системи після встановлення", text: "Тестуємо охолодження, підключення та стабільність роботи кондиціонера." },
+  { icon: Target, title: "Досвід роботи", text: "16 років професійної роботи з Mercedes-Benz Vito та точне розуміння всіх особливостей моделі." },
+  { icon: ShieldCheck, title: "Гарантія на роботи", text: "14 днів гарантії на монтаж, перевірку системи та виконані роботи." },
+  { icon: Settings2, title: "Професійне обладнання", text: "Оригінальна діагностика Mercedes DAS / XENTRY для точної перевірки та коректної роботи системи." },
+  { icon: Package, title: "Робота під ключ", text: "Повний комплекс робіт: від монтажу до заправки, перевірки та фінального тестування системи." },
 ];
 
 export function Advantages() {
