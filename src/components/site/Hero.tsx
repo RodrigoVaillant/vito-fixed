@@ -2,10 +2,10 @@ import heroImg from "@/assets/hero-vito.jpg";
 import { Award, ShieldCheck, Snowflake, Wrench } from "lucide-react";
 
 const trust = [
-  { icon: Award, label: "Досвід роботи" },
-  { icon: ShieldCheck, label: "Гарантія на роботи" },
-  { icon: Wrench, label: "Професійне обладнання" },
-  { icon: Snowflake, label: "Робота під ключ" },
+  { icon: Award, label: "Досвід роботи", subtitle: "16 років професійної роботи з Mercedes-Benz Vito та точне розуміння всіх особливостей моделі." },
+  { icon: ShieldCheck, label: "Гарантія на роботи", subtitle: "14 днів гарантії на монтаж, перевірку системи та виконані роботи." },
+  { icon: Wrench, label: "Професійне обладнання", subtitle: "Оригінальна діагностика Mercedes DAS / XENTRY для точної перевірки та коректної роботи системи." },
+  { icon: Snowflake, label: "Робота під ключ", subtitle: "Повний комплекс робіт: від монтажу до заправки, перевірки та фінального тестування системи." },
 ];
 
 export function Hero() {
@@ -59,12 +59,15 @@ export function Hero() {
           {trust.map((t) => (
             <div
               key={t.label}
-              className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur md:p-5"
+              className="flex flex-col gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur md:p-5"
             >
-              <span className="grid h-10 w-10 place-items-center rounded-xl bg-primary-glow/20 text-primary-glow">
-                <t.icon className="h-5 w-5" />
-              </span>
-              <span className="text-sm font-medium text-white/90">{t.label}</span>
+              <div className="flex items-center gap-3">
+                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-primary-glow/20 text-primary-glow">
+                  <t.icon className="h-5 w-5" />
+                </span>
+                <span className="text-sm font-semibold text-white/90">{t.label}</span>
+              </div>
+              <p className="text-xs leading-relaxed text-white/55">{t.subtitle}</p>
             </div>
           ))}
         </div>
